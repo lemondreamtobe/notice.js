@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" href="content/uilibs/bootstrap-3.3.5/css/bootstrap.css" />-->
+		<link href="css/notice.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<button id="noticeButton">click!</button>
+		
+		<script src="js/jquery-1.12.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/notice.js"></script>
+		<script>
+			$("#noticeButton").click(function(event) {
+				$("body").appearDialog(
+					{
+						model: false,
+						style: 'suceess',
+						message: 'i love js.i love css.i love HTML.i love douglas.我爱JS。我爱CSS。我爱HTML。我爱道格拉斯。'
+					});
+			});
+			
+		</script>
+	</body>
+</html>
