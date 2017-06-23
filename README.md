@@ -1,5 +1,6 @@
 # notice.js
 纪念第一次做的Jquery插件
+[DEMO]( https://lemondreamtobe.github.io/notice.js/)
 用法：负载在点击事件里：
  ```js
 		$("#noticeButton").click(function(event) {
