@@ -9,17 +9,20 @@
 				var settings = $.extend({}, dialogInfo, opt),
 					dialogHtml = "";
 					
-					dialogHtml	+= '<div class = "notice alert" style = "width:200px; padding:0px">'
+					dialogHtml	+= '<div class = "notice alert" style = "width:200px; height:200px;padding:0px">'
 							    + "<div class = 'notice-head' style = 'height: 10px'>"
 								+  "<button type = 'button' class = 'close' style = 'display: none'>&times;</button>"
 								+ "</div>"
 								+"<br>"
+								+'<div style="text-align:center;margin-top:15px">'
+								+'<img id = "alertType" src = "/notice.js/img/check.png" style="text-align:center">'
+								+'</div>'
 								+ "<div class = 'notice-body'>"
-								+ "<p style = 'margin: 0px; word-break: break-all; text-indent:2em;'>" + settings.message + "</p>"
+								+ "<p class='diap'>" + settings.message + "</p>"
 								+ "</div>"
 								+ '</div>';
 				
-				var modalDialog = "<div class = 'noticecover' id = 'coverId' style = 'position: absolute; top: 0; left: 0; width:100%; height:100%; z-index: 9999;'>" +
+				var modalDialog = "<div class = 'noticecover' id = 'coverId' style = 'position: absolute; top: 0; left: 0; width:100%; height:100%; z-index: 99;'>" +
 								  dialogHtml +
 								  "</div>";
 								  
@@ -45,10 +48,12 @@
 					switch (noticeStyle) {
 						case 'error':
 							$notice.addClass("alert-danger");
+							$('#alertType').attr('src','/notice.js/img/cross.png');
 							break;
 						
 						case 'normal':
 							$notice.addClass("alert-success");
+							$('#alertType').attr('src','/notice.js/img/check.png');
 							break;
 						
 						case 'warning':

@@ -11,18 +11,16 @@
 		<button id="noticeButton">click!</button>
 		
 		<script src="js/jquery-1.12.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 		<script src="js/notice.js"></script>
 		<script>
 			$("#noticeButton").click(function(event) {
 				$("body").appearDialog(
 					{
-						model: true,
-						style: 'suceess',
-						message: 'i love js.i love css.i love HTML.i love douglas.我爱JS。我爱CSS。我爱HTML。我爱道格拉斯。'
+						model: false,
+						style: 'error',
+						message: '操作失败'
 					});
 			});
-			
 		</script>
 	</body>
 </html>
